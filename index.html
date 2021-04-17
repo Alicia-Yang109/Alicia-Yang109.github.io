@@ -15,15 +15,38 @@ p {
  *{
    background-color:lavender;
  }
-  </style>
-
-<Script> </Script>
+</style>
 
 
 </head>
 <body>
-<h1>中文谜题游戏规则</h1><br>
-<p>请根据所给提示猜出谜题的答案，并输入对话框。如果所猜答案不正确，请继续作答，直到猜出结果。在猜题过程中，系统会不断给出提示哦~</p>
+<h1>谜语猜猜猜</h1><br>
+<p><strong>猜谜语，打一位诗人的名字。</strong></p>
+
+<div style="text-align:center"><button id="answer" class="center">点击开始答题</button></div><br>
+<div style="text-align:center"><button id="btn" class="center">点击查看答案</button></div>
+<script>
+
+
+var answer=document.getElementById('answer');
+answer.onclick = function() {
+var dum=prompt('请输入答案');
+if(dum=='李白'){
+  alert('恭喜你答对了！');
+}else if(dum!='李白'){
+  var bcd=prompt('答错了！请重新输入！提示--该诗人为唐代浪漫主义诗人。');
+ if(bcd=='李白'){
+   alert('恭喜你答对了')
+ }else{
+   confirm('错误！请重新开始答题。提示--该诗人号青莲居士，被后人誉为诗仙,作品有《静夜思》等。');
+ }
+}
+}
+var btn=document.getElementById('btn');
+btn.onclick = function() {
+ alert('正确答案为"李白"');
+}
+</Script>
 
 </body>
 
